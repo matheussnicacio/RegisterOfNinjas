@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 // JPA = Java Persistence API
 @Entity
 @Table(name = "tb_cadastro")
+
 public class NinjaModel {
 
     @Id
