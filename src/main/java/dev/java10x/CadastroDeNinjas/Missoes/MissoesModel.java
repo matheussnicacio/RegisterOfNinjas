@@ -28,6 +28,7 @@ public class MissoesModel {
 
     //@OneToMany - Uma missao pode ter varios ninjas
     @OneToMany(mappedBy = "missoes")
+    // Ignora loop de Serialização
     @JsonIgnore
     private List<NinjaModel> ninjas;
 
