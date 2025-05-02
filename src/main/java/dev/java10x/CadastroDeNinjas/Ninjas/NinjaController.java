@@ -36,7 +36,7 @@ public class NinjaController {
     // Mostrar ninja por ID (READ)
     // {id} se chama de pathvariable pois vai ser uma variavel que vai ser recebida no endpoint como parte da URL
     @GetMapping("/listar/{id}")
-    public NinjaModel listarNinjaPorId(@PathVariable Long id ) {
+    public NinjaModel listarNinjaPorId(@PathVariable Long id) {
         return ninjaService.listarNinjasPorId(id);
     }
 
@@ -47,8 +47,8 @@ public class NinjaController {
     }
 
     // Deletar Ninja (DELETE)
-    @DeleteMapping("/deletarID")
-    public String deletarNinjaPorId() {
-        return "Ninja deletado por ID";
+    @DeleteMapping("/deletar/{id}")
+    public void deletarNinjaPorId(@PathVariable Long id) {
+        ninjaService.deletarNinjaPorId(id);
     }
 }
