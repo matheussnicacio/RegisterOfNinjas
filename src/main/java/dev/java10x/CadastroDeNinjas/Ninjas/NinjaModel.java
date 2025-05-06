@@ -43,6 +43,9 @@ public class NinjaModel {
     @Column (name = "idade")
     private int idade;
 
+    @Column (name = "vila")
+    private String vila;
+
     // @ManyToOne - Um ninja tem apenas uma unica missao
     @ManyToOne
     // @JoinColumn - Junta duas colunas do banco de dados criando uma outra coluna
