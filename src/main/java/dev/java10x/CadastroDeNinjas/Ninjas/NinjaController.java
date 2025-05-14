@@ -12,8 +12,9 @@ import java.util.List;
 
 public class NinjaController {
 
+    // É uma boas prtatica a injeção de dependecia ser final
     private final NinjaRepository ninjaRepository;
-    private NinjaService ninjaService;
+    private final NinjaService ninjaService;
 
     public NinjaController(NinjaService ninjaService, NinjaRepository ninjaRepository) {
         this.ninjaService = ninjaService;
