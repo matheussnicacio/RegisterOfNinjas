@@ -1,5 +1,9 @@
 package dev.java10x.CadastroDeNinjas.Ninjas;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -23,12 +27,20 @@ public class NinjaController {
 
     // Puxar informacoes
     @GetMapping("/boasvindas")
+    @Operation(summary = "Mensagem de boas vindas", description = "Essa rota da uma mensagem de boas vindas para quem acessa ela")
     public String boasVindas() {
         return "Essa é a minha primeira mensagem nessa rota";
     }
 
     // Adicionar ninja (CREATE)
     @PostMapping("/criar")
+    @Operation(summary = "Cria um novo ninja", description = "Rota cria um novo ninja e insere no banco de dados")
+    @ApiResponses(value = {
+
+            @ApiResponse(responseCode = "201",description = "Ninja criado com sucesso"),
+            @ApiResponse(responseCode = "400",description = "Erro na criacao do ninja")
+
+    })
     public ResponseEntity<String> criarNinja(@RequestBody NinjaDTO ninja) {
         NinjaDTO novoNinja = ninjaService.criarNinja(ninja);
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -46,6 +58,14 @@ public class NinjaController {
     // Mostrar ninja por ID (READ)
     // {id} se chama de pathvariable pois vai ser uma variavel que vai ser recebida no endpoint como parte da URL
     @GetMapping("/listar/{id}")
+    @Operation(summary = "Lista ninja por ID", description = "Rota que lista um ninja pelo seu ID")
+    @ApiResponses(value = {
+
+            @ApiResponse(responseCode = "200",description = "Ninja encontrado com sucesso"),
+            @ApiResponse(responseCode = "404",description = "Ninja não encontrado")
+
+    })
+
     public ResponseEntity<?> listarNinjaPorId(@PathVariable Long id) {
 
         NinjaDTO ninja = ninjaService.listarNinjasPorId(id);
@@ -73,7 +93,18 @@ public class NinjaController {
 
     // Atualizar dados dos ninjas (UPDATE)
     @PutMapping("/alterar/{id}")
-    public ResponseEntity<?> alterarNinjaPorId(@PathVariable Long id, @RequestBody NinjaDTO ninjaAtualizado) {
+    @Operation(summary = "Altera ninja por ID", description = "Rota que altera um ninja pelo seu ID")
+    @ApiResponses(value = {
+
+            @ApiResponse(responseCode = "200",description = "Ninja alterado com sucesso"),
+            @ApiResponse(responseCode = "404",description = "Ninja não encontrado, não foi possivel encontra-lo")
+
+    })
+    public ResponseEntity<?> alterarNinjaPorId(
+            @Parameter(description = "Usuario manda o id no caminho da requisicao")
+            @PathVariable Long id,
+            @Parameter(description = "Usuario manda os dados do ninja a ser atualizado na requisição")
+            @RequestBody NinjaDTO ninjaAtualizado) {
 
         NinjaDTO ninja = ninjaService.atualizarNinja(id, ninjaAtualizado);
 
@@ -84,7 +115,7 @@ public class NinjaController {
                     .body("O ninja com o id " + id + " não encontrado");
         }
 
-        }
-
-
     }
+
+
+}
