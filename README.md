@@ -4,7 +4,6 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.8+-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
 > Uma API RESTful completa para cadastro, gerenciamento e controle de ninjas profissionais. Perfeita para academias ninja, clãs organizados e gestores de missões que precisam catalogar guerreiros silenciosos com habilidades únicas. 🐱‍👤
 
@@ -410,49 +409,11 @@ void deveCriarNinjaComSucesso() {
 }
 ```
 
----
-
-## 🤝 Contribuindo
-
-Contribuições são muito bem-vindas! Siga os passos abaixo:
-
-1. **Fork** o projeto
-2. Crie uma **branch** para sua feature (`git checkout -b feature/MinhaFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. **Push** para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um **Pull Request**
-
-### Padrões de Código
-
-- Siga as convenções do Java
-- Escreva testes para novas funcionalidades
-- Documente métodos públicos
-- Use commits semânticos
-
----
-
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto foi desenvolvido para fins de apredizado sobre APIs.
 
 ---
 
-## 📞 Contato
-
-**Seu Nome** - [@seu_twitter](https://twitter.com/seu_twitter)
-
-Email: seuemail@exemplo.com
-
-Link do Projeto: [https://github.com/seu-usuario/ninja-api](https://github.com/seu-usuario/ninja-api)
-
----
-
-## 🙏 Agradecimentos
-
-- Spring Boot Community
-- Todos os contribuidores
-- Inspiração: Naruto, Ninja Gaiden e cultura ninja
-
----
 
 ⭐ **Se este projeto foi útil, considere dar uma estrela!** ⭐
