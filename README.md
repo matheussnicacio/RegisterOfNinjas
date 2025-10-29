@@ -1,8 +1,8 @@
-# 🥷 NinjaAPI - Cadastro de Ninjas
+# 🥷 NinjaAPI - Cadastro de Ninjas 
 
 Bem-vindo à **NinjaAPI**, uma API RESTful voltada para o cadastro e gerenciamento de **ninjas**! Ideal para quem busca treinar, contratar ou apenas catalogar guerreiros silenciosos com habilidades únicas. 🐱‍👤
 
----
+----
 
 ## 🚀 Funcionalidades
 
@@ -12,7 +12,7 @@ Bem-vindo à **NinjaAPI**, uma API RESTful voltada para o cadastro e gerenciamen
 - ❌ Remoção de ninjas
 - 🧠 Filtros por ranking, clã, nível de habilidade, etc.
 
----
+----
 
 ## 🧪 Tecnologias Utilizadas
 
@@ -21,7 +21,7 @@ Bem-vindo à **NinjaAPI**, uma API RESTful voltada para o cadastro e gerenciamen
 - **Banco de Dados:** MySQL / H2 / 
 - **Ferramentas:** Postman, Swagger
 
----
+----
 
 ## 📦 Endpoints (exemplos)
 
@@ -33,7 +33,7 @@ Bem-vindo à **NinjaAPI**, uma API RESTful voltada para o cadastro e gerenciamen
 | PUT    | `/ninjas/alterar/{id}`    | Atualiza um ninja         |
 | DELETE | `/ninjas/deletar/{id}`    | Remove um ninja           |
 
----
+----
 
 ## 🖼️ Exemplo de Requisição
 
@@ -45,3 +45,4 @@ POST /ninjas
   "ranking": "S",
   "habilidades": ["Espada", "Agilidade", "Furtividade"]
 }
+
